@@ -60,7 +60,7 @@
 		     	return false;
 		    }
 
-		    if(phone.value.length >= 10 || phone.value.length <= 12)
+		    if(phone.value.length >= 10 || phone.value.length <= 11)
 		    {
 		    	boolPhoneLength = 1;
 		    }
