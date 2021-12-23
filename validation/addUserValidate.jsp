@@ -10,6 +10,8 @@
 	
 	<script type="text/javascript">
 
+		var boolName, boolIC, boolPhoneRegex, boolPhoneLength, boolEmail, boolStreet, boolPostcode, boolCity, boolState, boolPassword;
+
 		//validate name not more than 100 letters
 		function validateName()
 		{
@@ -17,7 +19,7 @@
 
 			if(name.value.length <= 100)
 			{
-				return true;
+				boolName = 1;
 			}
 			else
 			{
@@ -33,7 +35,7 @@
 
 			if(ic.value.length == 12)
 			{
-				return true;
+				boolIC = 1;
 			}
 			else
 			{
@@ -46,12 +48,11 @@
 		function validatePhoneNumber() 
 		{
 		    var phone = document.getElementById('formPhone');
-
 		    var regEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
 		    if(phone.value.match(regEx))
 		    {
-		      	return true;
+		    	boolPhoneRegex = 1;
 		    }
 		   	else
 		    {
@@ -61,7 +62,7 @@
 
 		    if(phone.value.length >= 10 || phone.value.length <= 12)
 		    {
-		      	return true;
+		    	boolPhoneLength = 1;
 		    }
 		    else
 		    {
@@ -77,7 +78,7 @@
 
 			if(email.value.length <= 30)
 			{
-				return true;
+				boolEmail = 1;
 			}
 			else
 			{
@@ -91,9 +92,9 @@
 		{
 			var street = document.getElementById("formStreet");
 
-			if(street.value.length <= 250)
+			if(street.value.length <= 100)
 			{
-				return true;
+				boolStreet = 1;
 			}
 			else
 			{
@@ -109,7 +110,7 @@
 
 			if(postcode.value.length == 5)
 			{
-				return true;
+				boolPostcode = 1;
 			}
 			else
 			{
@@ -125,7 +126,7 @@
 
 			if(city.value.length <= 50)
 			{
-				return true;
+				boolCity = 1;
 			}
 			else
 			{
@@ -141,7 +142,7 @@
 
 			if(state.value.length <= 20)
 			{
-				return true;
+				boolState = 1;
 			}
 			else
 			{
@@ -161,7 +162,7 @@
 			{
 				if(password1 == password2)
 				{
-					return true;
+					boolPassword = 1;
 				}
 				else
 				{
@@ -169,6 +170,14 @@
 					return false;
 				}
 
+			}
+		}
+
+		function validateForm()
+		{
+			if (boolName == 1 && boolIC == 1 && boolPhoneRegex == 1 && boolPhoneLength == 1 && boolEmail == 1 && boolStreet == 1 && boolPostcode == 1 && boolCity == 1 && boolState == 1 && boolPassword == 1)
+			{
+				document.myform.action = "/doDonate/addUserServlet";
 			}
 		}
 
@@ -182,7 +191,7 @@
 	<div class ="col-md-6 offset-md-3">
 		<br><br>
 		<h1>Sign Up<small> [Normal User]</small></h1>
-		<form method ="post" action="/doDonate/addUserServlet">
+		<form method ="post" name ="myform">
 
 			<br>
 
@@ -257,7 +266,7 @@
 			<br>
 
 			<div class="mb-4">
-				<input name="Submit" type="submit" class="btn-signup" value="Submit" onclick="validateName(); validateIC(); validatePhoneNumber(); validateEmail(); validateStreet(); validatePostcode(); validateCity(); validateState(); validateConfirmPassword()"> 
+				<input name="Submit" type="submit" class="btn-signup" value="Submit" onclick="validateName(); validateIC(); validatePhoneNumber(); validateEmail(); validateStreet(); validatePostcode(); validateCity(); validateState(); validateConfirmPassword(); validateForm()"> 
 			
 				<a href ="/doDonate/jsp/charity/addCharity.jsp" >Sign Up as Charity?</a>
 			</div>
