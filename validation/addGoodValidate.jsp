@@ -12,13 +12,15 @@
 </head>
 <script type="text/javascript">
 	
+	var boolName, boolPostage, boolDescription;
+
 	function validateName()
 	{
 		var name = document.getElementById("formName");
 
 		if(name.value.length <= 100)
 		{
-			return true;
+			boolName = 1;
 		}
 		else
 		{
@@ -34,7 +36,7 @@
 
 		if(postage.value.match(regex))
 		{
-			return true;
+			boolPostage = 1;
 		}
 		else
 		{
@@ -49,12 +51,20 @@
 
 		if(description.value.length <= 1000)
 		{
-			return true;
+			boolDescription = 1;
 		}
 		else
 		{
 			alert("Description should not more than 1000 letters")
 			return false;
+		}
+	}
+
+	function validateForm()
+	{
+		if(boolName == 1 && boolPostage == 1 && boolDescription == 1)
+		{
+			document.myform.action = "/doDonate/addGoodServlet";
 		}
 	}
 
@@ -68,7 +78,7 @@
             
 			     <div class ="col-md-8 offset-md-2">
 				
-					<form method ="post" action="/doDonate/addGoodServlet" enctype="multipart/form-data">
+					<form method ="post" name="myform" enctype="multipart/form-data">
 					<fieldset class="form-group border p-5" >
 					<legend class="w-auto mb-4"><b>Add New Good</b></legend>
 						
@@ -120,7 +130,7 @@
 						</div>
 						
 						<div class="col-md-12 text-center">
-							<input name="Submit" type="submit" class="btn btn-success" value="Submit" onclick="validateName(); validatePostage(); validateDescription()" /> 
+							<input name="Submit" type="submit" class="btn btn-success" value="Submit" onclick="validateName(); validatePostage(); validateDescription(); validateForm()" /> 
 						</div>			
 						</fieldset>
 			
