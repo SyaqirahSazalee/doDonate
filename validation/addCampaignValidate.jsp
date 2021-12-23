@@ -17,6 +17,8 @@
 </head>
 <script type="text/javascript">
 	
+	var boolName, boolTarget;
+
 	//validate campaign name should not exceed 100 characters
 	function validateName()
 	{
@@ -24,7 +26,7 @@
 
 		if(name.value.length <= 100)
 		{
-			return true;
+			boolName = 1;
 		}
 		else
 		{
@@ -41,12 +43,20 @@
 
 		if(target.value.match(regex))
 		{
-			return true;
+			boolTarget = 1;
 		}
 		else
 		{
 			alert("Please insert a valid target amount")
 			return false;
+		}
+	}
+
+	function validateForm()
+	{
+		if(boolName == 1 && boolTarget == 1)
+		{
+			document.myform.action = "/doDonate/addCampaignServlet";
 		}
 	}
 
@@ -60,7 +70,7 @@
             
 			     <div class ="col-md-8 offset-md-2">
 				
-					<form method ="post" action="/doDonate/addCampaignServlet" enctype="multipart/form-data">
+					<form method ="post" name="myform" enctype="multipart/form-data">
 					<fieldset class="form-group border p-5" >
 					<legend class="w-auto mb-4"><b>Add New Campaign</b></legend>
 						
@@ -133,7 +143,7 @@
 						</div>
 						
 						<div class="col-md-12 text-center">
-							<input name="Submit" type="submit" class="btn btn-success" value="Submit" onclick="validateName(); validateTarget();" /> 
+							<input name="Submit" type="submit" class="btn btn-success" value="Submit" onclick="validateName(); validateTarget(); validateForm()" /> 
 						</div>			
 						</fieldset>
 			
