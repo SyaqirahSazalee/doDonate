@@ -84,7 +84,7 @@
 						
 						<div class="mb-3">
 						  <label for="formName" class="form-label">Name</label>
-						  <input type="text" class="form-control" id="formName"  name ="name" required>
+						  <input type="text" class="form-control" id="formName"  name ="name" placeholder="Strawberry Long Dress" required>
 						</div>
 
 						<div class="mb-3">
@@ -116,7 +116,7 @@
 						
 						<div class="mb-3">
 						  <label for="formPostage" class="form-label">Postage</label>
-						  <input type="text" class="form-control" id="formPostage"  name ="postage" required>
+						  <input type="text" class="form-control" id="formPostage"  name ="postage" placeholder="5.00" required>
 						</div>
 						
 						<div class="mb-3">
