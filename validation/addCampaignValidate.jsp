@@ -76,7 +76,7 @@
 						
 						<div class="mb-3">
 						  <label for="formName" class="form-label">Campaign Name</label>
-						  <input type="text" class="form-control" id="formName"  name ="name" required>
+						  <input type="text" class="form-control" id="formName"  name ="name" placeholder="Together Kasih - Orphanage" required>
 						</div>
 										
 						<div class="mb-3">
@@ -91,7 +91,7 @@
 						<label for="formTarget" class="form-label">Campaign Target</label>
 						<div class="input-group mb-3">	
 						 <span class="input-group-text "> MYR </span>					  
-						  <input type="text" class="form-control " id="formTarget"  name ="target" required>
+						  <input type="text" class="form-control " id="formTarget"  name ="target" placeholder="3000.00" required>
 						</div>	
 						
 						<!--maxlength 1000 characters only-->
