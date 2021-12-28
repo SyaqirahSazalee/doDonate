@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Email Validation</title>
+	<title>Login</title>
 
 </head>
 <body>
@@ -10,7 +10,7 @@
 		<div class="mb-3">
 		  <label for="formEmail" class="form-label">Email</label>
 		  <br>
-		  <input type="email" class="form-control" id="formEmail"  name ="email" maxlength="30" required>
+		  <input type="email" class="form-control" id="formEmail"  name ="email" maxlength="30" placeholder="adamdaniel@gmail.com" required>
 		</div>
 
 		<br>
