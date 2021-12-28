@@ -229,70 +229,70 @@
 
 			<div class="mb-3">
 			  <label for="formCharityName" class="form-label">Organization Name</label>
-			  <input type="text" class="form-control" id="formCharityName" name ="charityName" required>
+			  <input type="text" class="form-control" id="formCharityName" name ="charityName" placeholder="Rumah Kasih Budi" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formPPM" class="form-label">PPM</label>
-			  <input type="text" class="form-control" id="formPPM"  name ="ppm" required>
+			  <input type="text" class="form-control" id="formPPM" name ="ppm" placeholder="PPM-01301720-10-0614" required>
 			</div>
 			
 			<br>
 
 			<div class="mb-3">
 			  <label for="formName" class="form-label">Organizer Name</label>
-			  <input type="text" class="form-control" id="formName" name ="name" required>
+			  <input type="text" class="form-control" id="formName" name ="name" placeholder="Adam Daniel" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formIC" class="form-label">Identity Number</label>
-			  <input type="text" class="form-control" id="formIC"  name ="ic" required>
+			  <input type="text" class="form-control" id="formIC"  name ="ic" placeholder="970404-10-5464" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formPhone" class="form-label">Phone Number</label>
-			  <input type="text" class="form-control" id="formPhone"  name ="phone" required>
+			  <input type="text" class="form-control" id="formPhone"  name ="phone" placeholder="0192146547" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formEmail" class="form-label">Email</label>
-			  <input type="email" class="form-control" id="formEmail"  name ="email" required>
+			  <input type="email" class="form-control" id="formEmail"  name ="email" placeholder="adamdaniel@gmail.com" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formStreet" class="form-label">Street</label>
-			  <input type="text" class="form-control" id="formStreet"  name ="street" required>
+			  <input type="text" class="form-control" id="formStreet"  name ="street" placeholder="No 6, Jalan Mewah, Taman Samudera" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formPostcode" class="form-label">Postcode</label>
-			  <input type="text" class="form-control" id="formPostcode"  name ="postcode" required>
+			  <input type="text" class="form-control" id="formPostcode"  name ="postcode" placeholder="53100" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formCity" class="form-label">City</label>
-			  <input type="text" class="form-control" id="formCity"  name ="city" required>
+			  <input type="text" class="form-control" id="formCity"  name ="city" placeholder="Kuala Lumpur" required>
 			</div>
 
 			<br>
 
 			<div class="mb-3">
 			  <label for="formState" class="form-label">State</label>
-			  <input type="text" class="form-control" id="formState"  name ="state" required>
+			  <input type="text" class="form-control" id="formState"  name ="state" placeholder="Kuala Lumpur" required>
 			</div>
 
 			<br>
